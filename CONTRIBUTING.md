@@ -19,7 +19,7 @@ Before contributing, please take a moment to read through the following guidelin
 
 *   **Fix Bugs:** Browse the [open issues](https://github.com/OpenmindAGI/OM1/issues) and look for bugs labeled "bug" or "help wanted." If you want to tackle a bug, comment on the issue to let us know you're working on it.
 
-*   **Implement Features:**  Check the [open issues](https://github.com/OpenmindAGI/OM1/issues) for features labeled "enhancement" or "bounty" or "help wanted".  It's best to discuss your approach in the issue comments *before* starting significant development.
+*   * **Implement Features:** Check the [open issues](https://github.com/OpenmindAGI/OM1/issues) for features labeled "enhancement" or "[bounty](https://github.com/OpenMind/OM1/wiki/Bounty-Program)" or "help wanted".  It's best to discuss your approach in the issue comments *before* starting significant development.
 
 *   **Write Tests:**  OM1 aims for high test coverage.  If you're adding new code, please include corresponding tests. If you find areas with insufficient test coverage, adding tests is a great contribution.
 
