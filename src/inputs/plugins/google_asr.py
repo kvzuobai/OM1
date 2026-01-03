@@ -81,6 +81,7 @@ class GoogleASRInput(FuserInput[str]):
 
         remote_input = getattr(self.config, "remote_input", False)
 
+        try:
         self.asr: ASRProvider = ASRProvider(
             rate=rate,
             chunk=chunk,
@@ -91,8 +92,12 @@ class GoogleASRInput(FuserInput[str]):
             language_code=language_code,
             remote_input=remote_input,
         )
-        self.asr.start()
-        self.asr.register_message_callback(self._handle_asr_message)
+                except Exception as e:
+            logging.warning(f"No audio device found. Disabling ASR input. Error: {e}")
+            self.asr = None
+                if self.asr is not None:
+            self.asr.start()
+            self.asr.register_message_callback(self._handle_asr_message)
 
         # Initialize sleep ticker provider
         self.global_sleep_ticker_provider = SleepTickerProvider()
