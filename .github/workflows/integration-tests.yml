@@ -22,8 +22,7 @@ jobs:
           - name: Clean git submodule cache
         run: |
           rm -rf .git/modules
-          git config --global --remove-section submodule || true
-      - name: Checkout code
+          git config --global --remove-section submodule 2>/dev/null; true      - name: Checkout code
         uses: actions/checkout@v5
         with:
           submodules: 'recursive'
