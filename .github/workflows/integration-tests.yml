@@ -19,6 +19,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+          - name: Clean git submodule cache
+        run: |
+          rm -rf .git/modules
+          git config --global --remove-section submodule || true
       - name: Checkout code
         uses: actions/checkout@v5
         with:
